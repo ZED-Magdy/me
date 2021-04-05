@@ -11,7 +11,17 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Zed Magdy Personal Blog',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Software,Engineer,Web,Developer,Blog,Dotnet,Dotnet core,.net,.net core,Laravel,symfony,vue,vuejs,laravel developer,.net developer,graphql,rest,rest api,api,microservices,ddd,domain driven design',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
