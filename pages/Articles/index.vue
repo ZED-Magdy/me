@@ -20,30 +20,31 @@
     <div class="row">
       <div class="col-12">
         <ul class="list-unstyled">
-          <div
+          <b-media
             v-for="article in articles"
             :key="article.path"
-            class="card mt-1"
+            right-align
+            class="mb-3 p-3"
+            tag="li"
           >
-            <div class="card-body">
-              <b-media class="mb-3" tag="li">
-                <template #aside>
-                  <b-img
-                    blank
-                    blank-color="#abc"
-                    width="64"
-                    alt="placeholder"
-                  ></b-img>
-                </template>
-                <h5 class="mt-0 mb-1">
-                  <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
-                </h5>
-                <p class="mb-0">
-                  {{ article.description }}
-                </p>
-              </b-media>
-            </div>
-          </div>
+            <template #aside>
+              <b-img
+                thumbnail
+                fluid
+                :src="article.img"
+                alt="placeholder"
+              ></b-img>
+            </template>
+            <h5 class="mt-2 mb-1">
+              <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
+            </h5>
+            <small class="text-muted"
+              >{{ formatDate(article.updatedAt) }} | by Zed Magdy</small
+            >
+            <p class="mb-0">
+              {{ article.description }}
+            </p>
+          </b-media>
         </ul>
       </div>
       <div v-if="articles.length === 0" class="col-12 text-center">
@@ -57,7 +58,7 @@
 export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
-      .only(['title', 'path', 'description', 'updatedAt'])
+      .only(['title', 'path', 'img', 'description', 'updatedAt'])
       .sortBy('date')
       .fetch()
     return {
@@ -74,16 +75,20 @@ export default {
       if (this.query !== '') {
         this.articles = await this.$content('articles')
           .search(this.query)
-          .only(['title', 'path', 'description', 'updatedAt'])
+          .only(['title', 'path', 'img', 'description', 'updatedAt'])
           .sortBy('date')
           .limit(3)
           .fetch()
       } else {
         this.articles = await this.$content('articles')
-          .only(['title', 'path', 'description', 'updatedAt'])
+          .only(['title', 'path', 'img', 'description', 'updatedAt'])
           .sortBy('date')
           .fetch()
       }
+    },
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
     },
   },
 }
@@ -93,9 +98,17 @@ export default {
 .container {
   min-height: 400px !important;
 }
+.media-aside-right img {
+  width: 128px !important;
+  height: 128px !important;
+}
 @media screen and (max-width: 996px) {
   .container {
     min-height: 600px !important;
+  }
+  .media-aside-right img {
+    width: 64px !important;
+    height: 64px !important;
   }
 }
 </style>

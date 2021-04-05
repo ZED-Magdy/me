@@ -2,6 +2,7 @@
 title: How to create a restful api with DotNet Core
 description: Learn create a restful api with DotNet Core.
 category: DotNetCore
+img: img/dotnet.png
 ---
 
 ## What is Rest-Api

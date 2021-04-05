@@ -35,10 +35,10 @@
         class="col-12 col-md-4"
       >
         <b-card :title="article.title">
+          <small class="text-muted">{{ formatDate(article.updatedAt) }}</small>
           <b-card-text>
             {{ article.description }}
           </b-card-text>
-
           <nuxt-link :to="article.path" variant="primary">Read More</nuxt-link>
         </b-card>
       </div>
@@ -55,6 +55,12 @@ export default {
       .sortBy('date')
       .fetch()
     return { articles }
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
   },
 }
 </script>
