@@ -13,13 +13,34 @@
       >
     </b-nav>
     <nuxt-content :document="doc"></nuxt-content>
+    <div class="row mt-5">
+      <div class="col-6">
+        <span v-if="prev">
+          <nuxt-link class="btn btn-outline-primary" :to="prev.path"
+            >Previous</nuxt-link
+          >
+        </span>
+      </div>
+      <div class="col-6 text-right">
+        <span v-if="next">
+          <nuxt-link class="btn btn-outline-primary" :to="next.path"
+            >Next</nuxt-link
+          >
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 export default {
   async asyncData({ $content, params }) {
     const doc = await $content('articles/' + params.slug).fetch()
-    return { doc }
+    const [prev, next] = await $content('articles')
+      .only(['title', 'path'])
+      .sortBy('date')
+      .surround(params.slug)
+      .fetch()
+    return { doc, prev, next }
   },
 }
 </script>
