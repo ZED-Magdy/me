@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-7">
-        <img class="header-image" src="/img/header.svg" />
+        <img class="header-image" src="img/header.svg" />
       </div>
       <div class="col-12 col-md-5">
         <div class="row">
@@ -15,16 +15,16 @@
         </div>
         <div class="row mt-5">
           <div class="col-3">
-            <img src="/img/dotnet.png" alt="dotnet logo" />
+            <img src="img/dotnet.png" alt="dotnet logo" />
           </div>
           <div class="col-3">
-            <img src="/img/logo.png" alt="vue logo" />
+            <img src="img/logo.png" alt="vue logo" />
           </div>
           <div class="col-3">
-            <img src="/img/symfony.png" alt="symfony logo" />
+            <img src="img/symfony.png" alt="symfony logo" />
           </div>
           <div class="col-3">
-            <img src="/img/Laravel.png" alt="laravel logo" />
+            <img src="img/Laravel.png" alt="laravel logo" />
           </div>
         </div>
         <div class="row mt-5">
