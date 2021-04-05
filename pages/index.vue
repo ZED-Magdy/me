@@ -1,42 +1,33 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-7">
+      <div class="col-4 offset-4">
         <img class="header-image" src="img/header.svg" />
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 text-center">
         <div class="row">
           <div class="col-12">
-            <h1 class="mt-3 text-primary title">Hi, my name is ZED</h1>
+            <h1 class="mt-3 text-primary title">ZED Magdy</h1>
             <h4 class="description">
-              I can build you a professional website that fits your needs.
+              Software Engineer, Fullstack Web developer.
             </h4>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-3">
-            <img src="img/dotnet.png" alt="dotnet logo" />
-          </div>
-          <div class="col-3">
-            <img src="img/logo.png" alt="vue logo" />
-          </div>
-          <div class="col-3">
-            <img src="img/symfony.png" alt="symfony logo" />
-          </div>
-          <div class="col-3">
-            <img src="img/Laravel.png" alt="laravel logo" />
-          </div>
-        </div>
-        <div class="row mt-5">
+        <div class="row mt-2">
           <div class="col-12 text-center">
-            <a class="btn btn-primary btn-lg" href="#">Get in touch</a>
+            <a
+              class="btn btn-primary btn-lg"
+              href="https://twitter.com/ZedMagdy"
+              target="_blank"
+              >Get in touch</a
+            >
           </div>
         </div>
       </div>
     </div>
     <div class="row mt-5 pt-5">
-      <div class="col-12 mb-3">
-        <h3>Recent Posts</h3>
+      <div class="col-12 mb-3 text-center">
+        <h2>Recent Posts</h2>
       </div>
       <div
         v-for="article in articles"

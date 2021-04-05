@@ -1,62 +1,57 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="light" variant="light">
-      <b-container>
-        <b-navbar-brand href="#">Zed-Magdy</b-navbar-brand>
-
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav class="ml-auto">
-            <b-navbar-nav>
-              <li class="nav-item">
-                <nuxt-link class="nav-link" to="/">Home</nuxt-link>
-              </li>
-              <li class="nav-item">
-                <nuxt-link class="nav-link" to="/articles">Blog</nuxt-link>
-              </li>
-            </b-navbar-nav>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-container>
-    </b-navbar>
-    <br />
+    <Navbar />
     <Nuxt />
-    <div class="jumbotron footer bg-light m-0 mt-3">
+    <div class="jumbotron footer bg-dark m-0 mt-3">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <div class="btn-group">
-              <a href="#" class="btn btn-primary btn-lg"
-                ><span class="d-none d-md-inline">Twitter</span>
-                <b-icon icon="twitter"></b-icon
-              ></a>
-              <a href="#" class="btn btn-dark btn-lg"
-                ><span class="d-none d-md-inline">Github</span>
-                <b-icon icon="github"></b-icon
-              ></a>
-            </div>
+            <a
+              href="https://twitter.com/ZedMagdy"
+              target="_blank"
+              class="btn btn-outline-primary btn-lg"
+              ><span class="d-none d-md-inline">Twitter</span>
+              <b-icon icon="twitter"></b-icon
+            ></a>
+            <a
+              href="https://github.com/ZED-Magdy"
+              target="_blank"
+              class="btn btn-outline-light btn-lg"
+              ><span class="d-none d-md-inline">Github</span>
+              <b-icon icon="github"></b-icon
+            ></a>
+          </div>
+          <div class="col-12 text-light text-center mt-3">
+            <p>Copyrigths ZedMagdy 2021</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+import Navbar from '@/components/Navbar'
+export default {
+  components: {
+    Navbar,
+  },
+}
+</script>
 <style scoped>
-.navbar {
-  padding-bottom: 0px !important;
+body {
+  font-family: Roboto;
+  font-weight: 400 !important;
 }
 .nuxt-link-exact-active {
   border-bottom: 3px #007bff solid;
+}
+.footer {
+  border-radius: 0px;
 }
 @media screen and (min-width: 1024px) {
   .footer {
     bottom: 0;
     margin-top: 10rem !important;
   }
-}
-.router-link-exact-active {
-  color: #fff;
-  background-color: #007bff;
 }
 </style>

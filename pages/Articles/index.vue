@@ -3,22 +3,26 @@
     <h1>Recent Posts</h1>
     <br />
     <ul class="list-unstyled">
-      <b-media
-        v-for="article in articles"
-        :key="article.path"
-        class="mb-3"
-        tag="li"
-      >
-        <template #aside>
-          <b-img blank blank-color="#abc" width="64" alt="placeholder"></b-img>
-        </template>
-        <h5 class="mt-0 mb-1">
-          <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
-        </h5>
-        <p class="mb-0">
-          {{ article.description }}
-        </p>
-      </b-media>
+      <div v-for="article in articles" :key="article.path" class="card mt-1">
+        <div class="card-body">
+          <b-media class="mb-3" tag="li">
+            <template #aside>
+              <b-img
+                blank
+                blank-color="#abc"
+                width="64"
+                alt="placeholder"
+              ></b-img>
+            </template>
+            <h5 class="mt-0 mb-1">
+              <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
+            </h5>
+            <p class="mb-0">
+              {{ article.description }}
+            </p>
+          </b-media>
+        </div>
+      </div>
     </ul>
   </div>
 </template>
@@ -39,4 +43,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.container {
+  min-height: 400px !important;
+}
+@media screen and (max-width: 996px) {
+  .container {
+    min-height: 600px !important;
+  }
+}
+</style>
