@@ -17,6 +17,26 @@ export default {
         content: 'Zed Magdy Personal Blog',
       },
       {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Zed Magdy',
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Zed Magdy',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Zed Magdy Personal Blog',
+      },
+      {
+        hid: 'apple-mobile-web-app-title',
+        name: 'apple-mobile-web-app-title',
+        content: 'Zed Magdy',
+      },
+      {
         hid: 'keywords',
         name: 'keywords',
         content:
