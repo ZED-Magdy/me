@@ -102,7 +102,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="img/laravel.png"
+                  src="img/Laravel.png"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
