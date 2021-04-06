@@ -44,8 +44,8 @@
           <div class="col-md-6 col-12 mt-5 p-3">
             <h4 class="text-justify">
               My name is <b>Abdelrahman</b>, I'm a senior software engineer From
-              From <b>Egypt</b>. I can build you a professional website using
-              the cutting edge technologies
+              <b>Egypt</b>. I can build you a professional website using the
+              cutting edge technologies
             </h4>
           </div>
         </div>
