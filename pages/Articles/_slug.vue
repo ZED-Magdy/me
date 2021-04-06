@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <img :src="doc.img" class="w-100" />
-    <h1 class="article-title">{{ doc.title }}</h1>
+    <h1 class="article-title w-50 ml-5">{{ doc.title }}</h1>
     <h2 class="mt-5">Table of contnets</h2>
     <b-nav vertical class="mb-5">
       <b-nav-item
@@ -47,9 +47,8 @@ export default {
 <style>
 .article-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 450px;
+  left: 450px;
   color: #fff;
 }
 .nuxt-content {
@@ -57,5 +56,26 @@ export default {
 }
 .nuxt-content p {
   font-size: 20px;
+}
+@media screen and (max-width: 576px) {
+  .article-title {
+    font-size: 16px;
+    top: 200px;
+    left: 50px;
+  }
+}
+@media screen and (min-width: 996px) {
+  .article-title {
+    font-size: 2rem;
+    top: 400px;
+    left: 200px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .article-title {
+    font-size: 2.5rem;
+    top: 450px;
+    left: 450px;
+  }
 }
 </style>
