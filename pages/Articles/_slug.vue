@@ -12,7 +12,7 @@
         >{{ item.text }}</b-nav-item
       >
     </b-nav>
-    <nuxt-content :document="doc"></nuxt-content>
+    <nuxt-content class="text-justify" :document="doc"></nuxt-content>
     <div class="row mt-5">
       <div class="col-6">
         <span v-if="prev">

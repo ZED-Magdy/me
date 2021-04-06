@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <Nuxt />
-    <div class="jumbotron footer bg-dark m-0 mt-3">
+    <div class="jumbotron footer bg-dark m-0">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
@@ -51,7 +51,6 @@ body {
 @media screen and (min-width: 1024px) {
   .footer {
     bottom: 0;
-    margin-top: 10rem !important;
   }
 }
 </style>
