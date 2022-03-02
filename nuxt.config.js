@@ -40,7 +40,7 @@ export default {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'Software,Engineer,Web,Developer,Blog,Dotnet,Dotnet core,.net,.net core,Laravel,symfony,vue,vuejs,laravel developer,.net developer,graphql,rest,rest api,api,microservices,ddd,domain driven design',
+          'Software,Engineer,Web,Developer,Blog,Dotnet,Dotnet core,.net,.net core,Laravel,symfony,vue,vuejs,laravel developer,.net developer,graphql,rest,rest api,api,microservices,ddd,domain driven design, Web Development, Website Developer',
       },
     ],
     link: [
