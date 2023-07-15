@@ -8,10 +8,10 @@
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
             <li class="nav-item">
-              <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+              <nuxt-link class="nav-link" to="/me">Home</nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link" to="/articles">Blog</nuxt-link>
+              <nuxt-link class="nav-link" to="/me/articles">Blog</nuxt-link>
             </li>
           </b-navbar-nav>
         </b-navbar-nav>
