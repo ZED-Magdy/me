@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-4 offset-4">
-          <img class="header-image" src="/img/header.svg" />
+          <img class="header-image" src="/me/img/header.svg" />
         </div>
         <div class="col-12 text-center">
           <div class="row">
@@ -39,7 +39,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-12 mt-5 p-3">
-            <img src="/img/me.jpg" class="img-thumbnail" />
+            <img src="/me/img/me.jpg" class="img-thumbnail" />
           </div>
           <div class="col-md-6 col-12 mt-5 p-3">
             <h4 class="text-justify">
@@ -68,7 +68,7 @@
             <b-card-text>
               {{ article.description }}
             </b-card-text>
-            <nuxt-link :to="article.path" variant="primary"
+            <nuxt-link :to="'/me/'+article.path" variant="primary"
               >Read More</nuxt-link
             >
           </b-card>
@@ -90,7 +90,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/core.jpg"
+                  src="/me/img/core.jpg"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -102,7 +102,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/Laravel.png"
+                  src="/me/img/Laravel.png"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -114,7 +114,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/symfony.png"
+                  src="/me/img/symfony.png"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -126,7 +126,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/wordpress.png"
+                  src="/me/img/wordpress.png"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -138,7 +138,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/logo.png"
+                  src="/me/img/logo.png"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -150,7 +150,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/nuxtjs.jpg"
+                  src="/me/img/nuxtjs.jpg"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -162,7 +162,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/react.webp"
+                  src="/me/img/react.webp"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -174,7 +174,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/rest.png"
+                  src="/me/img/rest.png"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
@@ -186,7 +186,7 @@
             <div class="card">
               <div class="card-body">
                 <img
-                  src="/img/graphql.png"
+                  src="/me/img/graphql.png"
                   class="img-thumbnail"
                   alt=""
                   srcset=""
